@@ -1,4 +1,4 @@
 master            192.168.15.195
-node              192.168.15.196
-loadbalancer      192.168.15.197
-ansible           192.168.15.198
+worker            192.168.15.196
+worker2           192.168.15.197
+loadbalancer      192.168.15.198
