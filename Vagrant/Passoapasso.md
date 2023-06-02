@@ -35,12 +35,12 @@ rm /etc/containerd/config.toml
 
 systemctl restart containerd
 
-kubeadm init --control-plane-endpoint="192.168.15.197:6443" --upload-certs --apiserver-advertise-address=192.168.15.195 --pod-network-cidr=10.244.0.0/16  
+kubeadm init --control-plane-endpoint="192.168.15.198:6443" --upload-certs --apiserver-advertise-address=192.168.15.195 --pod-network-cidr=10.244.0.0/16  
 
 
-  kubeadm join 192.168.15.197:6443 --token cshtz7.2xm3o1pvkacd68tc \
-        --discovery-token-ca-cert-hash sha256:f07d4286ed14946416e800d4f7894405c5d56f82bade95e5882d995d5e7c6022 \
-        --control-plane --certificate-key 2ef78ce3592c8be6b4a9a582fd948d6ec0df125dc5bab0d644f5163d42147574
+kubeadm join 192.168.15.198:6443 --token 3pnvy1.cqg05birw09hdi1k \
+        --discovery-token-ca-cert-hash sha256:52f02f2ded2fcecb33322541fb999cd27e7593ca5496f8f2c422f7226fbf65e5 \
+        --control-plane --certificate-key 72718f6327dfbc014fbbb73e8b7209bea94b13a00e944c282ab843c047884170
 
-kubeadm join 192.168.15.197:6443 --token cshtz7.2xm3o1pvkacd68tc \
-        --discovery-token-ca-cert-hash sha256:f07d4286ed14946416e800d4f7894405c5d56f82bade95e5882d995d5e7c6022 
+kubeadm join 192.168.15.198:6443 --token 3pnvy1.cqg05birw09hdi1k \
+        --discovery-token-ca-cert-hash sha256:52f02f2ded2fcecb33322541fb999cd27e7593ca5496f8f2c422f7226fbf65e5 
